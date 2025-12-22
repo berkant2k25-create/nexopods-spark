@@ -23,7 +23,7 @@ const features = [{
 }];
 const trustItems = [{
   icon: Shield,
-  title: "1 Year Warranty",
+  title: "6 Month Warranty",
   description: "Complete peace of mind"
 }, {
   icon: Truck,
