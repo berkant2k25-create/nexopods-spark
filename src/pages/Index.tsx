@@ -4,47 +4,55 @@ import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import ProductCard from "@/components/product/ProductCard";
 import { products } from "@/data/products";
-
-const features = [
-  {
-    icon: Headphones,
-    title: "Active Noise Cancellation",
-    description: "Block out the world and immerse yourself in pure sound."
-  },
-  {
-    icon: BatteryFull,
-    title: "Long Battery Life",
-    description: "Up to 60 hours of playtime. Power that lasts all day."
-  },
-  {
-    icon: Fingerprint,
-    title: "Smart Touch Controls",
-    description: "Intuitive controls at your fingertips. Tap, swipe, play."
-  },
-  {
-    icon: Gamepad2,
-    title: "Gaming Mode",
-    description: "Ultra-low 45ms latency for competitive mobile gaming."
-  }
-];
-
-const trustItems = [
-  { icon: Shield, title: "1 Year Warranty", description: "Complete peace of mind" },
-  { icon: Truck, title: "Free Shipping", description: "On orders above ₹999" },
-  { icon: RefreshCw, title: "7 Day Returns", description: "Easy return policy" }
-];
-
-const reviews = [
-  { name: "Rahul M.", rating: 5, text: "Best earbuds in this price range! The ANC is incredible.", avatar: "RM" },
-  { name: "Priya S.", rating: 5, text: "Crystal clear audio and super comfortable for long sessions.", avatar: "PS" },
-  { name: "Arjun K.", rating: 5, text: "Gaming mode is a game changer. No lag at all!", avatar: "AK" }
-];
-
+const features = [{
+  icon: Headphones,
+  title: "Active Noise Cancellation",
+  description: "Block out the world and immerse yourself in pure sound."
+}, {
+  icon: BatteryFull,
+  title: "Long Battery Life",
+  description: "Up to 60 hours of playtime. Power that lasts all day."
+}, {
+  icon: Fingerprint,
+  title: "Smart Touch Controls",
+  description: "Intuitive controls at your fingertips. Tap, swipe, play."
+}, {
+  icon: Gamepad2,
+  title: "Gaming Mode",
+  description: "Ultra-low 45ms latency for competitive mobile gaming."
+}];
+const trustItems = [{
+  icon: Shield,
+  title: "1 Year Warranty",
+  description: "Complete peace of mind"
+}, {
+  icon: Truck,
+  title: "Free Shipping",
+  description: "On orders above ₹999"
+}, {
+  icon: RefreshCw,
+  title: "7 Day Returns",
+  description: "Easy return policy"
+}];
+const reviews = [{
+  name: "Rahul M.",
+  rating: 5,
+  text: "Best earbuds in this price range! The ANC is incredible.",
+  avatar: "RM"
+}, {
+  name: "Priya S.",
+  rating: 5,
+  text: "Crystal clear audio and super comfortable for long sessions.",
+  avatar: "PS"
+}, {
+  name: "Arjun K.",
+  rating: 5,
+  text: "Gaming mode is a game changer. No lag at all!",
+  avatar: "AK"
+}];
 const Index = () => {
   const featuredProducts = products.slice(0, 4);
-
-  return (
-    <Layout>
+  return <Layout>
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         {/* Background Effects */}
@@ -56,7 +64,7 @@ const Index = () => {
             <div className="space-y-8 animate-fade-up">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                <span className="text-sm font-medium text-primary">New Collection 2024</span>
+                <span className="text-sm font-medium text-primary">New Collection 2025</span>
               </div>
               
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
@@ -85,7 +93,7 @@ const Index = () => {
 
               <div className="flex items-center gap-8 pt-4">
                 <div>
-                  <p className="text-3xl font-bold text-gradient">50K+</p>
+                  <p className="text-3xl font-bold text-gradient">5K+</p>
                   <p className="text-muted-foreground text-sm">Happy Customers</p>
                 </div>
                 <div className="w-px h-12 bg-border" />
@@ -101,13 +109,11 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="relative animate-fade-up" style={{ animationDelay: "0.2s" }}>
+            <div className="relative animate-fade-up" style={{
+            animationDelay: "0.2s"
+          }}>
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl blur-3xl" />
-              <img
-                src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=800&q=80"
-                alt="Nexopods Pro"
-                className="relative w-full rounded-3xl animate-float"
-              />
+              <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=800&q=80" alt="Nexopods Pro" className="relative w-full rounded-3xl animate-float" />
             </div>
           </div>
         </div>
@@ -124,11 +130,11 @@ const Index = () => {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredProducts.map((product, index) => (
-              <div key={product.id} className="animate-fade-up" style={{ animationDelay: `${index * 0.1}s` }}>
+            {featuredProducts.map((product, index) => <div key={product.id} className="animate-fade-up" style={{
+            animationDelay: `${index * 0.1}s`
+          }}>
                 <ProductCard product={product} />
-              </div>
-            ))}
+              </div>)}
           </div>
 
           <div className="text-center mt-12">
@@ -153,19 +159,15 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div
-                key={feature.title}
-                className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 hover-lift animate-fade-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
+            {features.map((feature, index) => <div key={feature.title} className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 hover-lift animate-fade-up" style={{
+            animationDelay: `${index * 0.1}s`
+          }}>
                 <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                   <feature.icon className="h-7 w-7 text-primary" />
                 </div>
                 <h3 className="font-semibold text-lg mb-2">{feature.title}</h3>
                 <p className="text-muted-foreground text-sm">{feature.description}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -185,19 +187,12 @@ const Index = () => {
               </p>
               
               <ul className="space-y-4">
-                {[
-                  "Premium sound quality at affordable prices",
-                  "Designed specifically for the Indian market",
-                  "Rigorous quality testing on every product",
-                  "Dedicated customer support in Hindi & English"
-                ].map((item, index) => (
-                  <li key={index} className="flex items-center gap-3">
+                {["Premium sound quality at affordable prices", "Designed specifically for the Indian market", "Rigorous quality testing on every product", "Dedicated customer support in Hindi & English"].map((item, index) => <li key={index} className="flex items-center gap-3">
                     <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center">
                       <div className="w-2 h-2 rounded-full bg-primary" />
                     </div>
                     <span>{item}</span>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
 
               <Link to="/about">
@@ -210,11 +205,7 @@ const Index = () => {
 
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-tl from-primary/20 to-transparent rounded-3xl blur-3xl" />
-              <img
-                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80"
-                alt="Premium Headphones"
-                className="relative w-full rounded-3xl"
-              />
+              <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80" alt="Premium Headphones" className="relative w-full rounded-3xl" />
             </div>
           </div>
         </div>
@@ -224,8 +215,7 @@ const Index = () => {
       <section className="py-16 border-y border-border">
         <div className="container-custom">
           <div className="grid md:grid-cols-3 gap-8">
-            {trustItems.map((item, index) => (
-              <div key={item.title} className="flex items-center gap-4 justify-center">
+            {trustItems.map((item, index) => <div key={item.title} className="flex items-center gap-4 justify-center">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                   <item.icon className="h-6 w-6 text-primary" />
                 </div>
@@ -233,8 +223,7 @@ const Index = () => {
                   <p className="font-semibold">{item.title}</p>
                   <p className="text-muted-foreground text-sm">{item.description}</p>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -250,16 +239,11 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            {reviews.map((review, index) => (
-              <div
-                key={review.name}
-                className="p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 animate-fade-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
+            {reviews.map((review, index) => <div key={review.name} className="p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 animate-fade-up" style={{
+            animationDelay: `${index * 0.1}s`
+          }}>
                 <div className="flex gap-1 mb-4">
-                  {[...Array(review.rating)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-primary text-primary" />
-                  ))}
+                  {[...Array(review.rating)].map((_, i) => <Star key={i} className="h-4 w-4 fill-primary text-primary" />)}
                 </div>
                 <p className="text-muted-foreground mb-4">"{review.text}"</p>
                 <div className="flex items-center gap-3">
@@ -268,8 +252,7 @@ const Index = () => {
                   </div>
                   <span className="font-medium">{review.name}</span>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -293,8 +276,6 @@ const Index = () => {
           </Link>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default Index;
