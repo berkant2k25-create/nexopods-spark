@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ShoppingBag } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ThemeToggle from "@/components/ThemeToggle";
 import logo from "@/assets/logo.png";
 
 const navigation = [
@@ -41,6 +42,7 @@ const Header = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-4">
+          <ThemeToggle />
           <Button variant="ghost" size="icon">
             <ShoppingBag className="h-5 w-5" />
           </Button>
